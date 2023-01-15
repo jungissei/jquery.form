@@ -1,0 +1,715 @@
+@use "../../../../jquery.common/css/base/mixin" as *;
+
+
+/**----------------------------------------------------------------------------
+* フォームテーブル
+*----------------------------------------------------------------------------*/
+/* 変数定義 ここから */
+$require_txt: "\5FC5\9808";
+$require_color: #fd9495;
+$optional_txt: "\4EFB\610F";
+$optional_color: #95cafd;
+
+
+
+
+/**----------------------------------------------------------------------------
+* フォームアイテム
+*----------------------------------------------------------------------------*/
+/* 変数定義 ここから */
+$input_txt_color: #212529;
+$txt_placeholder_color: #ccc;
+$focus_color: #81c3e2;
+$border_color: #ced4da;
+
+/*--------------------------------------
+* フォームグループ：フォームテーブル内のレイアウト
+*--------------------------------------*/
+@mixin hyphen_separated{
+  width: 4.25em;
+
+  &:not(:last-child){
+    position: relative;
+    margin-right: 2em;
+
+    &::before{
+      display: block;
+      position: absolute;
+      top: 14px;
+      right: -1.5em;
+      content: "\2015";
+      width: 1em;
+      color: #ced4da;
+    }
+  }
+}
+
+@mixin form_control {
+  display: block;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: $input_txt_color;
+  background-color: #fff;
+  border: 1px solid $border_color;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+
+  &::placeholder {
+    color: $txt_placeholder_color;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $focus_color;
+    box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
+  }
+}
+
+
+
+@include mq(pc){
+
+  /**----------------------------------------------------------------------------
+  * # フォームTOC
+  *
+  * ## フォームエリア
+  * ## フォームテーブル
+  * ## フォームレイアウト
+  * - リスト ブロック要素
+  * - リスト インラインブロック要素
+  * ## フォームアイテム
+  * - テキスト入力欄
+  * - ラジオボタン
+  * - チェックボックス
+  * - セレクトボックス
+  * - 郵便番号
+  * - ajaxzip3ボタン
+  * - ファイル選択
+  * - submitボタン
+  * - エラーメッセージ
+  * - カレンダー
+  * ## プライバシーポリシー
+  *----------------------------------------------------------------------------*/
+
+  /**----------------------------------------------------------------------------
+  * フォームエリア
+  *----------------------------------------------------------------------------*/
+  #area_form{
+    >*[class^="area_form_row"]{
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+    }
+  }
+  /* 変数定義 ここまで */
+  .form_wrp {
+    .form_table {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+
+      tbody {
+        tr {
+          th,
+          td {
+            font-weight: normal;
+          }
+
+          &:not(:last-child) {
+            td {
+              padding: 0 0 20px 20px;
+            }
+          }
+
+          &:last-child {
+            td {
+              padding-left: 20px;
+            }
+          }
+
+          th {
+            position: relative;
+            padding: 15px 0 0 52px;
+            width: 200px;
+
+            &::before {
+              position: absolute;
+              top: 15px;
+              left: 0;
+              color: #fff;
+              font-size: 13px;
+              padding: 2px 8px;
+              font-weight: 700;
+            }
+
+            &:not(.require) {
+              &::before {
+                background-color: $optional_color;
+                content: $optional_txt;
+              }
+            }
+
+            &.require {
+              &::before {
+                background-color: $require_color;
+                content: $require_txt;
+              }
+            }
+          }
+
+          td {
+            width: calc(100% - 215px);
+          }
+        }
+      }
+
+      .td_sub_ttl{
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+
+    }
+  }
+
+  /**----------------------------------------------------------------------------
+  * フォームレイアウト
+  *----------------------------------------------------------------------------*/
+  /*--------------------------------------
+  * リスト ブロック要素
+  *--------------------------------------*/
+  .form_item_inline_block_pc {
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  /*--------------------------------------
+  * リスト インラインブロック要素
+  *--------------------------------------*/
+  .form_item_block_pc {
+    li {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+
+  /* 住所
+  *--------------------------------------*/
+  .form_address_group {
+    padding-top: 15px;
+
+    .group_row1{
+      margin-bottom: 3px;
+    }
+    .group_row2{
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .group_col1{
+        width: 10em;
+      }
+      .group_col2{
+        padding-left: 0.5em;
+      }
+    }
+    .group_row3{
+      margin-bottom: 3px;
+    }
+
+    .group_txt {
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+  /* 住所(別々)
+  *--------------------------------------*/
+  .form_separated_address_group{
+    .group_row1{
+      margin-bottom: 3px;
+    }
+    .group_row2{
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .group_col2{
+        padding-left: 0.5em;
+      }
+    }
+    .group_row3{
+      margin-bottom: 8px;
+    }
+    .group_row4{
+      margin-bottom: 8px;
+    }
+
+    .group_txt{
+      display: block;
+      font-size: 14px;
+    }
+
+
+    .group_postal_code {
+      .group_postal_code_row {
+        display: flex;
+
+        .group_postal_code_col {
+          @include hyphen_separated;
+        }
+      }
+    }
+  }
+
+
+  /* お名前 姓名別々
+  *--------------------------------------*/
+  .form_name_group {
+    .group_row{
+      display: flex;
+      justify-content: space-between;
+
+      .group_col {
+        width: calc(50% - 7.5px);
+      }
+    }
+  }
+
+
+
+  /* お電話番号 別々
+  *--------------------------------------*/
+  .form_tel_group {
+    .group_row{
+      display: flex;
+
+      .group_col {
+        @include hyphen_separated;
+      }
+    }
+  }
+
+
+
+  /* メールアドレス＆確認用
+  *--------------------------------------*/
+  .form_mail_group {
+    .group_row1{
+      margin-bottom: 15px;
+    }
+    .group_row2{
+      margin-bottom: 3px;
+    }
+    .group_txt{
+      font-size: 14px;
+    }
+  }
+
+
+
+
+  /*--------------------------------------
+  * 補足文
+  *--------------------------------------*/
+  .form_remark {
+    li {
+      position: relative;
+      font-size: 14px;
+      padding-left: 1.4em;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "※";
+      }
+    }
+  }
+
+  /* 変数定義 ここまで */
+  .form_wrp {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+
+    /*---------------------------
+    * テキスト入力欄
+    *---------------------------*/
+    input,
+    textarea {
+      &.form_control {
+        @include form_control;
+      }
+    }
+
+    textarea.form_control {
+      resize: vertical;
+    }
+
+    /*---------------------------
+    * ラジオボタン
+    *---------------------------*/
+    .form_radio {
+      padding-top: 15px;
+
+      li {
+        label {
+          position: relative;
+          cursor: pointer;
+
+          input[type="radio"] {
+            display: none;
+
+            + .form_list_item_label {
+              display: inline-block;
+              position: relative;
+              line-height: 1.65;
+              padding-left: 1.5em;
+
+              &::before {
+                position: absolute;
+                top: 3px;
+                left: 0;
+                content: "";
+                width: 20px;
+                height: 20px;
+                border: 1px solid $border_color;
+                border-radius: 50%;
+                background-color: #fff;
+                transition: all 0.2s;
+              }
+
+              &::after {
+                position: absolute;
+                top: 7px;
+                left: 4px;
+                content: "";
+                width: 1em;
+                height: 1em;
+                width: 12px;
+                height: 12px;
+                transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+                transform: scale(0, 0);
+                border-radius: 50%;
+                background: $focus_color;
+              }
+
+              &:hover{
+                &::before {
+                  border: 1px solid $focus_color;
+                  box-shadow: 0 0 0 3px rgba($focus_color, 0.5);
+                }
+              }
+            }
+
+            &:checked {
+              + .form_list_item_label {
+                &::after {
+                  transform: scale(1, 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*---------------------------
+    * チェックボックス
+    *---------------------------*/
+    .form_check {
+      li {
+        label {
+          position: relative;
+          cursor: pointer;
+
+          input[type="checkbox"] {
+            display: none;
+
+            + .form_list_item_label {
+              display: inline-block;
+              position: relative;
+              line-height: 1.65;
+              padding-left: 1.5em;
+
+              &::before {
+                position: absolute;
+                top: 3px;
+                left: 0;
+                content: "";
+                width: 20px;
+                height: 20px;
+                border: 1px solid $border_color;
+                background: #fff;
+              }
+
+              &::after {
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                content: "";
+                width: 8px;
+                height: 15px;
+                border-right: 3px solid $focus_color;
+                border-bottom: 3px solid $focus_color;
+                transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+                transform: scale(0, 0) rotate(43deg);
+              }
+
+              &:hover{
+                &::before {
+                  border: 1px solid $focus_color;
+                  box-shadow: 0 0 0 3px rgba($focus_color, 0.5);
+                }
+              }
+            }
+
+            &:checked {
+              + .form_list_item_label {
+                &::after {
+                  transform: scale(1, 1) rotate(43deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*---------------------------
+    * セレクトボックス
+    *---------------------------*/
+    .form_select {
+      position: relative;
+
+      select {
+        background-image: url(./img/arrow_down.svg);
+        background-position: right 15px center;
+        background-size: 13px 8px;
+        background-repeat: no-repeat;
+        @include form_control;
+      }
+
+      &.select_pref{
+        width: 17.25em;
+      }
+    }
+
+    /*---------------------------
+    * 郵便番号
+    *---------------------------*/
+    .form_postal_code {
+      position: relative;
+      padding-left: 1.5em;
+
+      &::before {
+        position: absolute;
+        top: 0.8em;
+        left: 0;
+        content: "\3012";
+      }
+    }
+
+    /*---------------------------
+    * ajaxzip3ボタン
+    *---------------------------*/
+    .ajaxzip3_btn {
+      .btn_inner {
+        font-size: 14px;
+        border: 1px solid $border_color;
+        padding: 8px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid $focus_color;
+          box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
+        }
+      }
+    }
+
+    /*---------------------------
+    * ファイル選択
+    *---------------------------*/
+    .form_file {
+      font-size: 14px;
+      padding-top: 5px;
+
+      .file_row{
+        &::after{
+          display: block;
+          content: "";
+          clear: both;
+        }
+      }
+
+      input {
+        position: absolute;
+        outline: 0;
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .form_file_label {
+        border: 1px solid $border_color;
+        padding: 8px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
+        float: left;
+        width: 116px;
+        text-align: center;
+      }
+
+      .form_file_name {
+        padding: 13px 8px 0;
+        line-height: 1.2;
+        cursor: pointer;
+        float: left;
+        width: calc(100% - 116px);
+      }
+
+      &:hover {
+        .form_file_label {
+          border: 1px solid $focus_color;
+          box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
+        }
+      }
+    }
+
+    /*---------------------------
+    * submitボタン
+    *---------------------------*/
+    .btn_submit {
+      .btn_inner {
+        display: block;
+        line-height: 1;
+        padding: 1em 4em;
+        margin-right: auto;
+        margin-left: auto;
+        transition: all 0.2s;
+        font-weight: bold;
+        font-size: 16px;
+        min-width: 200px;
+        text-align: center;
+        color: #fff;
+        transition: all 0.2s;
+
+        &:disabled{
+          border: 1px solid #ccc;
+          background-color: #ccc;
+        }
+
+        &:not(:disabled){
+          border: 1px solid $focus_color;
+          background-color: $focus_color;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    /*---------------------------
+      * エラーメッセージ
+      *---------------------------*/
+    label.error {
+      display: block;
+      color: #cc0000;
+      padding: 5px 10px;
+      background: #f4e4e4;
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+  }
+
+  /*---------------------------
+  * カレンダー
+  *---------------------------*/
+  .flatpickr-calendar
+    .flatpickr-innerContainer
+    .flatpickr-weekdays
+    .flatpickr-weekday:nth-child(7n + 1),
+  .flatpickr-calendar
+    .flatpickr-innerContainer
+    .flatpickr-days
+    .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n
+      + 1) {
+    color: red;
+  }
+
+  /* 土曜日：青 */
+  .flatpickr-calendar
+    .flatpickr-innerContainer
+    .flatpickr-weekdays
+    .flatpickr-weekday:nth-child(7),
+  .flatpickr-calendar
+    .flatpickr-innerContainer
+    .flatpickr-days
+    .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n) {
+    color: blue;
+  }
+
+
+
+  /**----------------------------------------------------------------------------
+  * プライバシーポリシー
+  *----------------------------------------------------------------------------*/
+  .form_privacy {
+    >*[class^="form_privacy_row"]{
+      &:not(:last-child){
+        margin-bottom: 15px;
+      }
+    }
+
+
+    .privacy_ttl {
+      .ttl_inner {
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+
+    .privacy_txt{
+      height: 250px;
+      overflow-y: scroll;
+      border: #c0c0c0 1px solid;
+      padding: 30px;
+      box-shadow: inset -1px 2px 4px #dfdfdf;
+      font-size: 14px;
+
+      p{
+        &:not(:last-child){
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .privacy_check{
+      text-align: center;
+    }
+  }
+}
