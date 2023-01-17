@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="stylesheet"
+      href="/jquery.common/css/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="../lib/common/css/style.css"
+      type="text/css"
+      media="all"
+    />
+
+    <title>jquery.form / Input - Text</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <section id="template_ttl" class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <h1 class="ttl_page">jquery.form / Input - Text</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main>
+        <section class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <!-- Form Start-->
+                <div class="block_form">
+                  <form id="area_form" class="form_wrp" action="#" method="get">
+                    <div class="area_form_row1">
+                      <!-- Form Table Start-->
+                      <table class="form_table">
+                        <tbody>
+                          <tr>
+                            <th class="require">
+                              <label for="your_name" class="form_table_label">
+                                お名前
+                              </label>
+                            </th>
+                            <td>
+                              <input
+                                id="your_name"
+                                class="form_control form_require"
+                                name="your_name"
+                                type="text"
+                                placeholder="田中 太郎"
+                                autocomplete="name"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th class="require">
+                              <label
+                                for="your_family_name"
+                                class="form_table_label"
+                              >
+                                お名前(別々)
+                              </label>
+                            </th>
+                            <td>
+                              <div class="form_name_group valid_group">
+                                <div class="group_row">
+                                  <div class="group_col">
+                                    <input
+                                      id="your_family_name"
+                                      class="form_control form_require_name_group"
+                                      name="your_family_name"
+                                      type="text"
+                                      placeholder="田中"
+                                      autocomplete="family-name"
+                                    />
+                                  </div>
+                                  <div class="group_col">
+                                    <input
+                                      id="your_given_name"
+                                      class="form_control form_require_name_group"
+                                      name="your_family_name"
+                                      type="text"
+                                      placeholder="太郎"
+                                      autocomplete="given-name"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- Form Table End -->
+                    </div>
+                    <div class="area_form_row3">
+                      <div class="btn_submit">
+                        <input
+                          id="form_submit"
+                          class="btn_inner"
+                          type="submit"
+                          value="送信"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- Form End -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+
+    <!-- yubinbango Start-->
+    <script
+      type="text/javascript"
+      src="/yubinbango/yubinbango.js"
+      charset="UTF-8"
+    ></script>
+    <!-- yubinbango End -->
+
+    <script type="text/javascript" src="/jquery/dist/jquery.js"></script>
+
+    <!-- flatpicker Start -->
+    <link
+      rel="stylesheet"
+      href="/flatpickr/dist/flatpickr.css"
+      type="text/css"
+      media="all"
+    />
+    <script type="text/javascript" src="/flatpickr/dist/flatpickr.js"></script>
+    <script type="text/javascript" src="/flatpickr/dist/l10n/ja.js"></script>
+    <!-- flatpicker End -->
+
+    <!-- jquery-validation Start -->
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/jquery.validate.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/additional-methods.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/localization/messages_ja.js"
+    ></script>
+    <!-- jquery-validation End -->
+
+    <script type="text/javascript" src="../lib/common/js/scripts.js"></script>
+    <script type="text/javascript" src="../lib/pages/js/scripts.js"></script>
+  </body>
+</html>

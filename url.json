@@ -2,5 +2,38 @@
   {
     "text" : "Basic",
     "url" : "/jquery.form/demo/index.html"
+  },{
+    "text" : "Input - Text",
+    "url" : "/jquery.form/demo/input_text.html"
+  },{
+    "text" : "Input - Email",
+    "url" : "/jquery.form/demo/input_email.html"
+  },{
+    "text" : "Input - Tel",
+    "url" : "/jquery.form/demo/input_tel.html"
+  },{
+    "text" : "Input - Radio",
+    "url" : "/jquery.form/demo/input_radio.html"
+  },{
+    "text" : "Input - Checkbox",
+    "url" : "/jquery.form/demo/input_checkbox.html"
+  },{
+    "text" : "Input - File",
+    "url" : "/jquery.form/demo/input_file.html"
+  },{
+    "text" : "Input - Date",
+    "url" : "/jquery.form/demo/input_date.html"
+  },{
+    "text" : "Select",
+    "url" : "/jquery.form/demo/select.html"
+  },{
+    "text" : "Address",
+    "url" : "/jquery.form/demo/address.html"
+  },{
+    "text" : "Textarea",
+    "url" : "/jquery.form/demo/textarea.html"
+  },{
+    "text" : "Privacy policy",
+    "url" : "/jquery.form/demo/privacy_policy.html"
   }
 ]

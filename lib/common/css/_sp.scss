@@ -1,28 +1,69 @@
 @use "../../../../jquery.common/css/base/mixin" as *;
 
 
+// ----------------------------------------------------------------------------
+// 【Table Of Content】
+//
+// Variables
+//    Form tale
+//    Form item
+// Mixin
+//    Hyphen separated
+//    Form control
+// Form styles
+//    Form area
+//    Form table
+//    Form layout
+//        List Block
+//        List Inline block
+//        Address group
+//        Separated address group
+//        Name separated group
+//        TEL separated group
+//        Mail double check group
+//        Postal code
+//        Remark
+//    Form item
+//        Input Text
+//        Input Radio button
+//        Input Check box
+//        Input File
+//        Input Date (flatpickr)
+//        Select
+//        Textarea
+//        Submit Button
+//        Error message
+//  Privacy policy
+// ----------------------------------------------------------------------------
 
-/**----------------------------------------------------------------------------
-* フォームテーブル
-*----------------------------------------------------------------------------*/
-/* 変数定義 ここから */
+
+
+// ----------------------------------------------------------------------------
+// Variables
+// ----------------------------------------------------------------------------
+// --------------------------------------
+// Form tale
+// --------------------------------------
 $require_txt: "\5FC5\9808";
 $require_color: #fd9495;
 $optional_txt: "\4EFB\610F";
 $optional_color: #95cafd;
 
-/**----------------------------------------------------------------------------
-* フォームアイテム
-*----------------------------------------------------------------------------*/
-/* 変数定義 ここから */
+// --------------------------------------
+// Form item
+// --------------------------------------
 $input_txt_color: #212529;
 $txt_placeholder_color: #ccc;
 $focus_color: #81c3e2;
 $border_color: #ced4da;
 
-/*--------------------------------------
-* フォームグループ：フォームテーブル内のレイアウト
-*--------------------------------------*/
+
+// ----------------------------------------------------------------------------
+// Mixin
+// ----------------------------------------------------------------------------
+// --------------------------------------
+// Hyphen separated
+// --------------------------------------
 @mixin hyphen_separated{
   width: 4.25em;
 
@@ -42,6 +83,10 @@ $border_color: #ced4da;
   }
 }
 
+
+// --------------------------------------
+// Form control
+// --------------------------------------
 @mixin form_control {
   display: block;
   display: block;
@@ -62,38 +107,20 @@ $border_color: #ced4da;
   &:focus {
     border: 1px solid $focus_color;
     box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
+    outline: unset;
   }
 }
 
 
-
+// ----------------------------------------------------------------------------
+// Form styles
+// ----------------------------------------------------------------------------
 @include mq(sp){
 
-  /**----------------------------------------------------------------------------
-  * # フォームTOC
-  *
-  * ## フォームエリア
-  * ## フォームテーブル
-  * ## フォームレイアウト
-  * - リスト ブロック要素
-  * - リスト インラインブロック要素
-  * ## フォームアイテム
-  * - テキスト入力欄
-  * - ラジオボタン
-  * - チェックボックス
-  * - セレクトボックス
-  * - 郵便番号
-  * - ajaxzip3ボタン
-  * - ファイル選択
-  * - submitボタン
-  * - エラーメッセージ
-  * - カレンダー
-  * ## プライバシーポリシー
-  *----------------------------------------------------------------------------*/
 
-  /**----------------------------------------------------------------------------
-  * フォームエリア
-  *----------------------------------------------------------------------------*/
+  // --------------------------------------
+  // Form area
+  // --------------------------------------
   #area_form{
     >*[class^="area_form_row"]{
       &:not(:last-child){
@@ -101,7 +128,7 @@ $border_color: #ced4da;
       }
     }
   }
-  /* 変数定義 ここまで */
+
   .form_wrp {
     .form_table {
       width: 100%;
@@ -158,12 +185,11 @@ $border_color: #ced4da;
     }
   }
 
-  /**----------------------------------------------------------------------------
-  * フォームレイアウト
-  *----------------------------------------------------------------------------*/
-  /*--------------------------------------
-  * リスト ブロック要素
-  *--------------------------------------*/
+
+  // --------------------------------------
+  // Form layout
+  // --------------------------------------
+  // List Block
   .form_item_inline_block_sp {
     li {
       display: inline-block;
@@ -174,9 +200,7 @@ $border_color: #ced4da;
     }
   }
 
-  /*--------------------------------------
-  * リスト インラインブロック要素
-  *--------------------------------------*/
+  // List Inline block
   .form_item_block_sp {
     li {
       display: block;
@@ -188,8 +212,7 @@ $border_color: #ced4da;
   }
 
 
-  /* 住所
-  *--------------------------------------*/
+  // Address group
   .form_address_group {
     .group_row1{
       margin-bottom: 3px;
@@ -217,8 +240,7 @@ $border_color: #ced4da;
   }
 
 
-  /* 住所(別々)
-  *--------------------------------------*/
+  // Separated address group
   .form_separated_address_group{
     .group_row1{
       margin-bottom: 3px;
@@ -257,8 +279,7 @@ $border_color: #ced4da;
   }
 
 
-  /* お名前 姓名別々
-  *--------------------------------------*/
+  // Name separated group
   .form_name_group {
     .group_row{
       display: flex;
@@ -271,8 +292,7 @@ $border_color: #ced4da;
   }
 
 
-  /* お電話番号 別々
-  *--------------------------------------*/
+  // TEL separated group
   .form_tel_group {
     .group_row{
       display: flex;
@@ -283,8 +303,8 @@ $border_color: #ced4da;
     }
   }
 
-  /* メールアドレス＆確認用
-  *--------------------------------------*/
+
+  // Mail double check group
   .form_mail_group {
     .group_row1{
       margin-bottom: 15px;
@@ -298,10 +318,36 @@ $border_color: #ced4da;
   }
 
 
+  // Postal code
+  .form_postal_code {
+    position: relative;
+    padding-left: 1.5em;
 
-  /*--------------------------------------
-  * 補足文
-  *--------------------------------------*/
+    &::before {
+      position: absolute;
+      top: 0.8em;
+      left: 0;
+      content: "\3012";
+    }
+  }
+
+  .ajaxzip3_btn {
+    .btn_inner {
+      font-size: 14px;
+      border: 1px solid $border_color;
+      padding: 8px;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid $focus_color;
+        box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
+      }
+    }
+  }
+
+
+  // Remark
   .form_remark {
     padding-top: 8px;
 
@@ -325,25 +371,21 @@ $border_color: #ced4da;
     }
   }
 
-  /* 変数定義 ここまで */
+
+
   .form_wrp {
-    /*---------------------------
-    * テキスト入力欄
-    *---------------------------*/
-    input,
-    textarea {
+
+    // --------------------------------------
+    // Form item
+    // --------------------------------------
+    // Input Text
+    input{
       &.form_control {
         @include form_control;
       }
     }
 
-    textarea.form_control {
-      resize: vertical;
-    }
-
-    /*---------------------------
-    * ラジオボタン
-    *---------------------------*/
+    // Input Radio button
     .form_radio {
       padding-top: 15px;
 
@@ -401,9 +443,8 @@ $border_color: #ced4da;
       }
     }
 
-    /*---------------------------
-    * チェックボックス
-    *---------------------------*/
+
+    // Input Check box
     .form_check {
       li {
         label {
@@ -457,58 +498,7 @@ $border_color: #ced4da;
       }
     }
 
-    /*---------------------------
-    * セレクトボックス
-    *---------------------------*/
-    .form_select {
-      position: relative;
-
-      select {
-        background-image: url(./img/arrow_down.svg);
-        background-position: right 15px center;
-        background-size: 13px 8px;
-        background-repeat: no-repeat;
-        @include form_control;
-      }
-
-    }
-
-    /*---------------------------
-    * 郵便番号
-    *---------------------------*/
-    .form_postal_code {
-      position: relative;
-      padding-left: 1.5em;
-
-      &::before {
-        position: absolute;
-        top: 0.8em;
-        left: 0;
-        content: "\3012";
-      }
-    }
-
-    /*---------------------------
-    * ajaxzip3ボタン
-    *---------------------------*/
-    .ajaxzip3_btn {
-      .btn_inner {
-        font-size: 14px;
-        border: 1px solid $border_color;
-        padding: 8px;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        cursor: pointer;
-
-        &:hover {
-          border: 1px solid $focus_color;
-          box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
-        }
-      }
-    }
-
-    /*---------------------------
-    * ファイル選択
-    *---------------------------*/
+    // Input File
     .form_file {
       font-size: 14px;
       padding-top: 5px;
@@ -556,9 +546,56 @@ $border_color: #ced4da;
       }
     }
 
-    /*---------------------------
-    * submitボタン
-    *---------------------------*/
+
+    // Input Date (flatpickr)
+    .flatpickr-calendar
+      .flatpickr-innerContainer
+      .flatpickr-weekdays
+      .flatpickr-weekday:nth-child(7n + 1),
+    .flatpickr-calendar
+      .flatpickr-innerContainer
+      .flatpickr-days
+      .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n + 1)
+    {
+      color: red;
+    }
+
+    .flatpickr-calendar
+      .flatpickr-innerContainer
+      .flatpickr-weekdays
+      .flatpickr-weekday:nth-child(7),
+    .flatpickr-calendar
+      .flatpickr-innerContainer
+      .flatpickr-days
+      .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n)
+    {
+      color: blue;
+    }
+
+    // Select
+    .form_select {
+      position: relative;
+
+      select {
+        background-image: url(./img/arrow_down.svg);
+        background-position: right 15px center;
+        background-size: 13px 8px;
+        background-repeat: no-repeat;
+        @include form_control;
+      }
+    }
+
+
+    // Textarea
+    textarea {
+      &.form_control {
+        resize: vertical;
+        @include form_control;
+      }
+    }
+
+
+    // Submit Button
     .btn_submit {
       .btn_inner {
         display: block;
@@ -587,9 +624,8 @@ $border_color: #ced4da;
       }
     }
 
-    /*---------------------------
-    * エラーメッセージ
-    *---------------------------*/
+
+    // Error message
     label.error {
       display: block;
       color: #cc0000;
@@ -601,38 +637,11 @@ $border_color: #ced4da;
     }
   }
 
-  /*---------------------------
-  * カレンダー
-  *---------------------------*/
-  .flatpickr-calendar
-    .flatpickr-innerContainer
-    .flatpickr-weekdays
-    .flatpickr-weekday:nth-child(7n + 1),
-  .flatpickr-calendar
-    .flatpickr-innerContainer
-    .flatpickr-days
-    .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n
-      + 1) {
-    color: red;
-  }
-
-  /* 土曜日：青 */
-  .flatpickr-calendar
-    .flatpickr-innerContainer
-    .flatpickr-weekdays
-    .flatpickr-weekday:nth-child(7),
-  .flatpickr-calendar
-    .flatpickr-innerContainer
-    .flatpickr-days
-    .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n) {
-    color: blue;
-  }
 
 
-
-  /**----------------------------------------------------------------------------
-  * プライバシーポリシー
-  *----------------------------------------------------------------------------*/
+  // ----------------------------------------------------------------------------
+  // Privacy policy
+  // ----------------------------------------------------------------------------
   .form_privacy {
     >*[class^="form_privacy_row"]{
       &:not(:last-child){
