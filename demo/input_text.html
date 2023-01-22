@@ -47,23 +47,6 @@
                         <tbody>
                           <tr>
                             <th class="require">
-                              <label for="your_name" class="form_table_label">
-                                お名前
-                              </label>
-                            </th>
-                            <td>
-                              <input
-                                id="your_name"
-                                class="form_control form_require"
-                                name="your_name"
-                                type="text"
-                                placeholder="田中 太郎"
-                                autocomplete="name"
-                              />
-                            </td>
-                          </tr>
-                          <tr>
-                            <th class="require">
                               <label
                                 for="your_family_name"
                                 class="form_table_label"
@@ -72,32 +55,83 @@
                               </label>
                             </th>
                             <td>
-                              <div class="form_name_group valid_group">
+                              <div
+                                class="form_name_group"
+                                data-valid-group="required_all"
+                              >
                                 <div class="group_row">
                                   <div class="group_col">
                                     <input
                                       id="your_family_name"
-                                      class="form_control form_require_name_group"
+                                      class="form_control"
                                       name="your_family_name"
                                       type="text"
                                       placeholder="田中"
                                       autocomplete="family-name"
+                                      data-valid-group-item="required_all"
                                     />
                                   </div>
                                   <div class="group_col">
                                     <input
                                       id="your_given_name"
-                                      class="form_control form_require_name_group"
-                                      name="your_family_name"
+                                      class="form_control"
+                                      name="your_given_name"
                                       type="text"
                                       placeholder="太郎"
                                       autocomplete="given-name"
+                                      data-valid-group-item="required_all"
                                     />
                                   </div>
                                 </div>
                               </div>
                             </td>
                           </tr>
+                          <!-- <tr>
+                            <th class="require">
+                              <label for="your_phone1" class="form_table_label">
+                                電話番号(別々)
+                              </label>
+                            </th>
+                            <td>
+                              <div
+                                class="form_tel_group"
+                                data-valid-group="required_tel"
+                              >
+                                <div class="group_row">
+                                  <div class="group_col">
+                                    <input
+                                      id="your_phone1"
+                                      name="your_phone1"
+                                      type="tel"
+                                      class="form_control"
+                                      placeholder="012"
+                                      data-valid-group-item="required_tel"
+                                    />
+                                  </div>
+                                  <div class="group_col">
+                                    <input
+                                      id="your_phone2"
+                                      name="your_phone2"
+                                      type="tel"
+                                      class="form_control"
+                                      placeholder="3456"
+                                      data-valid-group-item="required_tel"
+                                    />
+                                  </div>
+                                  <div class="group_col">
+                                    <input
+                                      id="your_phone3"
+                                      name="your_phone3"
+                                      type="tel"
+                                      class="form_control"
+                                      placeholder="7890"
+                                      data-valid-group-item="required_tel "
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr> -->
                         </tbody>
                       </table>
                       <!-- Form Table End -->
