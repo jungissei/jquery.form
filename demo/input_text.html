@@ -41,65 +41,84 @@
                 <!-- Form Start-->
                 <div class="block_form">
                   <form id="area_form" class="form_wrp" action="#" method="get">
-                    <div class="area_form_row1">
-                      <!-- Form Table Start-->
-                      <table class="form_table">
-                        <tbody>
-                          <tr>
-                            <th class="require">
-                              <label
-                                for="your_family_name"
-                                class="form_table_label"
-                              >
-                                お名前(別々)
-                              </label>
-                            </th>
-                            <td>
-                              <div
-                                class="form_name_group"
-                                data-valid-group="required_all"
-                              >
-                                <div class="group_row">
-                                  <div class="group_col">
-                                    <input
-                                      id="your_family_name"
-                                      class="form_control"
-                                      name="your_family_name"
-                                      type="text"
-                                      placeholder="田中"
-                                      autocomplete="family-name"
-                                      data-valid-group-item="required_all"
-                                    />
-                                  </div>
-                                  <div class="group_col">
-                                    <input
-                                      id="your_given_name"
-                                      class="form_control"
-                                      name="your_given_name"
-                                      type="text"
-                                      placeholder="太郎"
-                                      autocomplete="given-name"
-                                      data-valid-group-item="required_all"
-                                    />
-                                  </div>
+                    <!-- Form Table Start-->
+                    <table class="form_table">
+                      <tbody>
+                        <tr>
+                          <th class="require">
+                            <label for="your_name" class="form_table_label">
+                              お名前
+                            </label>
+                          </th>
+                          <td>
+                            <input
+                              id="your_name"
+                              class="form_control"
+                              name="your_name"
+                              type="text"
+                              placeholder="田中 太郎"
+                              autocomplete="name"
+                              required
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="require">
+                            <label
+                              for="your_family_name"
+                              class="form_table_label"
+                            >
+                              お名前(別々)
+                            </label>
+                          </th>
+                          <td>
+                            <div
+                              class="form_name_group"
+                              data-valid-group="required_all"
+                            >
+                              <div class="group_row">
+                                <div class="group_col">
+                                  <input
+                                    id="your_family_name"
+                                    class="form_control"
+                                    name="your_family_name"
+                                    type="text"
+                                    placeholder="田中"
+                                    autocomplete="family-name"
+                                    required
+                                    data-valid-group-item="required_all"
+                                  />
+                                </div>
+                                <div class="group_col">
+                                  <input
+                                    id="your_given_name"
+                                    class="form_control"
+                                    name="your_given_name"
+                                    type="text"
+                                    placeholder="太郎"
+                                    autocomplete="given-name"
+                                    required
+                                    data-valid-group-item="required_all"
+                                  />
                                 </div>
                               </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <!-- Form Table End -->
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- Form Table End -->
+
+                    <!-- Submit Button Start -->
+                    <div class="btn_submit">
+                      <input
+                        id="form_submit"
+                        class="btn_inner"
+                        type="submit"
+                        value="送信"
+                      />
                     </div>
-                    <div class="area_form_row3">
-                      <div class="btn_submit">
-                        <input
-                          id="form_submit"
-                          class="btn_inner"
-                          type="submit"
-                          value="送信"
-                        />
-                      </div>
-                    </div>
+                    <!-- Submit Button End -->
                   </form>
                 </div>
                 <!-- Form End -->
@@ -111,26 +130,7 @@
       <footer></footer>
     </div>
 
-    <!-- yubinbango Start-->
-    <script
-      type="text/javascript"
-      src="/yubinbango/yubinbango.js"
-      charset="UTF-8"
-    ></script>
-    <!-- yubinbango End -->
-
     <script type="text/javascript" src="/jquery.common/js/jquery.js"></script>
-
-    <!-- flatpicker Start -->
-    <link
-      rel="stylesheet"
-      href="/flatpickr/dist/flatpickr.css"
-      type="text/css"
-      media="all"
-    />
-    <script type="text/javascript" src="/flatpickr/dist/flatpickr.js"></script>
-    <script type="text/javascript" src="/flatpickr/dist/l10n/ja.js"></script>
-    <!-- flatpicker End -->
 
     <!-- jquery-validation Start -->
     <script

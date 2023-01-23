@@ -11,6 +11,7 @@
 //    Hyphen separated
 //    Form control
 // Form styles
+//    Block form
 //    Form area
 //    Form table
 //    Form layout
@@ -117,18 +118,20 @@ $border_color: #ced4da;
 // ----------------------------------------------------------------------------
 @include mq(sp){
 
+  // --------------------------------------
+  // Block form
+  // --------------------------------------
+  .block_form{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #fff;
+  }
 
   // --------------------------------------
   // Form area
   // --------------------------------------
-  #area_form{
-    >*[class^="area_form_row"]{
-      &:not(:last-child){
-        margin-bottom: 30px;
-      }
-    }
-  }
-
   .form_wrp {
     .form_table {
       width: 100%;
@@ -597,6 +600,8 @@ $border_color: #ced4da;
 
     // Submit Button
     .btn_submit {
+      margin-top: 30px;
+
       .btn_inner {
         display: block;
         line-height: 1;
