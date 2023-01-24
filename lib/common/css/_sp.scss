@@ -394,11 +394,16 @@ $border_color: #ced4da;
 
       li {
         label {
+          display: block;
           position: relative;
           cursor: pointer;
 
           input[type="radio"] {
-            display: none;
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            opacity: 0;
+            visibility: hidden;
 
             + .form_list_item_label {
               display: inline-block;
@@ -451,11 +456,19 @@ $border_color: #ced4da;
     .form_check {
       li {
         label {
+          display: block;
           position: relative;
           cursor: pointer;
+          overflow: hidden;
+          padding-left: 3px;
+          margin-left: -3px;
 
           input[type="checkbox"] {
-            display: none;
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            opacity: 0;
+            visibility: hidden;
 
             + .form_list_item_label {
               display: inline-block;
@@ -534,7 +547,7 @@ $border_color: #ced4da;
       }
 
       .form_file_name {
-        padding: 13px 8px 0;
+        padding: 9px 8px 0;
         line-height: 1.2;
         cursor: pointer;
         float: left;
