@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="stylesheet"
+      href="/jquery.common/css/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="../lib/common/css/style.css"
+      type="text/css"
+      media="all"
+    />
+
+    <title>jquery.form / Address</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <section id="template_ttl" class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <h1 class="ttl_page">jquery.form / Address</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main>
+        <section class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <!-- Form Start-->
+                <div class="block_form">
+                  <form id="area_form" class="form_wrp" action="#" method="get">
+                    <!-- Form Table Start-->
+                    <table class="form_table">
+                      <tbody>
+                        <tr>
+                          <th class="require">
+                            <label
+                              for="your_postal_code"
+                              class="form_table_label"
+                            >
+                              住所
+                            </label>
+                          </th>
+                          <td>
+                            <div
+                              class="form_address_group h-adr"
+                              data-valid-group="required_all"
+                            >
+                              <input
+                                type="hidden"
+                                class="p-country-name"
+                                value="Japan"
+                              />
+                              <div class="group_row1">
+                                <label for="your_postal_code" class="group_txt">
+                                  郵便番号
+                                </label>
+                              </div>
+                              <div class="group_row2">
+                                <div class="group_col1">
+                                  <div class="form_postal_code">
+                                    <input
+                                      type="tel"
+                                      id="your_postal_code"
+                                      name="your_postal_code"
+                                      class="form_control p-postal-code"
+                                      size="8"
+                                      maxlength="8"
+                                      placeholder="1234567"
+                                      autocomplete="postal-code"
+                                      required
+                                      data-valid-group-item="required_all"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="group_col2">
+                                  <div class="ajaxzip3_btn">
+                                    <span class="btn_inner postal-search">
+                                      住所検索
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group_row3">
+                                <ul class="form_remark">
+                                  <li>ハイフンなしで入力</li>
+                                </ul>
+                              </div>
+                              <div class="group_row4">
+                                <input
+                                  type="text"
+                                  id="your_address"
+                                  name="your_address"
+                                  class="form_control p-region p-locality p-street-address p-extended-address"
+                                  placeholder="東京都新宿区西新宿2-8-1"
+                                  required
+                                  data-valid-group-item="required_all"
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="require">
+                            <label
+                              for="your_postal_code"
+                              class="form_table_label"
+                            >
+                              住所
+                            </label>
+                          </th>
+                          <td>
+                            <div
+                              class="form_address_group h-adr"
+                              data-valid-group="required_all"
+                            >
+                              <input
+                                type="hidden"
+                                class="p-country-name"
+                                value="Japan"
+                              />
+                              <div class="group_row1">
+                                <label for="your_postal_code" class="group_txt">
+                                  郵便番号
+                                </label>
+                              </div>
+                              <div class="group_row2">
+                                <div class="group_col1">
+                                  <div class="form_postal_code">
+                                    <input
+                                      type="tel"
+                                      id="your_postal_code2"
+                                      name="your_postal_code2"
+                                      class="form_control p-postal-code"
+                                      size="8"
+                                      maxlength="8"
+                                      placeholder="1234567"
+                                      autocomplete="postal-code"
+                                      required
+                                      data-valid-group-item="required_all"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="group_col2">
+                                  <div class="ajaxzip3_btn">
+                                    <span class="btn_inner postal-search">
+                                      住所検索
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group_row3">
+                                <ul class="form_remark">
+                                  <li>ハイフンなしで入力</li>
+                                </ul>
+                              </div>
+                              <div class="group_row4">
+                                <input
+                                  type="text"
+                                  id="your_address2"
+                                  name="your_address2"
+                                  class="form_control p-region p-locality p-street-address p-extended-address"
+                                  placeholder="東京都新宿区西新宿2-8-1"
+                                  required
+                                  data-valid-group-item="required_all"
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- Form Table End -->
+
+                    <!-- Submit Button Start -->
+                    <div class="btn_submit">
+                      <input
+                        id="form_submit"
+                        class="btn_inner"
+                        type="submit"
+                        value="送信"
+                      />
+                    </div>
+                    <!-- Submit Button End -->
+                  </form>
+                </div>
+                <!-- Form End -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+
+    <!--yubinbango ここから-->
+    <script
+      type="text/javascript"
+      src="/yubinbango/yubinbango.js"
+      charset="UTF-8"
+    ></script>
+    <!--yubinbango ここまで-->
+
+    <script type="text/javascript" src="/jquery.common/js/jquery.js"></script>
+
+    <!-- jquery-validation Start -->
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/jquery.validate.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/additional-methods.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/localization/messages_ja.js"
+    ></script>
+    <!-- jquery-validation End -->
+
+    <script type="text/javascript" src="../lib/common/js/scripts.js"></script>
+    <script type="text/javascript" src="../lib/pages/js/scripts.js"></script>
+  </body>
+</html>
