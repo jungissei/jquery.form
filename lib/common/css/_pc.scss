@@ -691,6 +691,8 @@ $border_color: #ced4da;
   // Privacy policy
   // ----------------------------------------------------------------------------
   .form_privacy {
+    margin-top: 30px;
+
     >*[class^="form_privacy_row"]{
       &:not(:last-child){
         margin-bottom: 15px;

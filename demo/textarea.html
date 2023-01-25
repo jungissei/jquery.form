@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="stylesheet"
+      href="/jquery.common/css/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="../lib/common/css/style.css"
+      type="text/css"
+      media="all"
+    />
+
+    <title>jquery.form / Textarea</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <section id="template_ttl" class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <h1 class="ttl_page">jquery.form / Textarea</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main>
+        <section class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <!-- Form Start-->
+                <div class="block_form">
+                  <form id="area_form" class="form_wrp" action="#" method="get">
+                    <!-- Form Table Start-->
+                    <table class="form_table">
+                      <tbody>
+                        <tr>
+                          <th class="require">
+                            <label for="your_message" class="form_table_label">
+                              テキストエリア
+                            </label>
+                          </th>
+                          <td>
+                            <textarea
+                              name="your_message"
+                              id="your_message"
+                              cols="40"
+                              rows="5"
+                              class="form_control"
+                              placeholder="お問い合わせ内容を入力"
+                              required
+                            ></textarea>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- Form Table End -->
+
+                    <!-- Submit Button Start -->
+                    <div class="btn_submit">
+                      <input
+                        id="form_submit"
+                        class="btn_inner"
+                        type="submit"
+                        value="送信"
+                      />
+                    </div>
+                    <!-- Submit Button End -->
+                  </form>
+                </div>
+                <!-- Form End -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+
+    <script type="text/javascript" src="/jquery.common/js/jquery.js"></script>
+
+    <!-- jquery-validation Start -->
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/jquery.validate.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/additional-methods.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/jquery-validation/dist/localization/messages_ja.js"
+    ></script>
+    <!-- jquery-validation End -->
+
+    <script type="text/javascript" src="../lib/common/js/scripts.js"></script>
+    <script type="text/javascript" src="../lib/pages/js/scripts.js"></script>
+  </body>
+</html>
