@@ -1,8 +1,5 @@
 [
   {
-    "text" : "Basic",
-    "url" : "/jquery.form/demo/index.html"
-  },{
     "text" : "Input - Text",
     "url" : "/jquery.form/demo/input_text.html"
   },{
