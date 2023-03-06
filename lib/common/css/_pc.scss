@@ -234,7 +234,6 @@ $border_color: #ced4da;
     .group_row2{
       display: flex;
       align-items: center;
-      margin-bottom: 8px;
 
       .group_col1{
         width: 10em;
@@ -362,6 +361,8 @@ $border_color: #ced4da;
 
   // Remark
   .form_remark {
+    padding-top: 8px;
+
     li {
       position: relative;
       font-size: 14px;

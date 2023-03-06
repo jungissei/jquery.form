@@ -67,7 +67,13 @@
                               placeholder="田中 太郎"
                               autocomplete="name"
                               required
+                              aria-describedby="your_name_remark"
                             />
+                            <ul id="your_name_remark" class="form_remark">
+                              <li>
+                                入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
+                              </li>
+                            </ul>
                           </td>
                         </tr>
                         <tr>
@@ -95,6 +101,7 @@
                                     autocomplete="family-name"
                                     required
                                     data-valid-group-item="required_all"
+                                    aria-describedby="your_family_name_remark"
                                   />
                                 </div>
                                 <div class="group_col">
@@ -107,10 +114,24 @@
                                     autocomplete="given-name"
                                     required
                                     data-valid-group-item="required_all"
+                                    aria-describedby="your_given_name_remark"
                                   />
                                 </div>
                               </div>
                             </div>
+                            <ul
+                              id="your_family_name_remark"
+                              class="form_remark"
+                            >
+                              <li>
+                                入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
+                              </li>
+                            </ul>
+                            <ul id="your_given_name_remark" class="form_remark">
+                              <li>
+                                入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
+                              </li>
+                            </ul>
                           </td>
                         </tr>
                       </tbody>
