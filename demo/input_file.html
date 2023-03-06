@@ -27,7 +27,9 @@
           <div class="layout_inner">
             <div class="layout_container">
               <div class="layout_width">
-                <h1 class="ttl_page">jQuery.form / Input - File</h1>
+                <h1 id="form_title" class="ttl_page">
+                  jQuery.form / Input - File
+                </h1>
               </div>
             </div>
           </div>
@@ -40,7 +42,13 @@
               <div class="layout_width">
                 <!-- Form Start-->
                 <div class="block_form">
-                  <form id="area_form" class="form_wrp" action="#" method="get">
+                  <form
+                    id="area_form"
+                    class="form_wrp"
+                    aria-labelledby="form_title"
+                    action="#"
+                    method="get"
+                  >
                     <!-- Form Table Start-->
                     <table class="form_table">
                       <tbody>
