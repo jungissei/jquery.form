@@ -50,7 +50,7 @@
                     method="get"
                   >
                     <!-- Form Table Start-->
-                    <table class="form_table">
+                    <table class="form_table" aria-label="お問い合わせフォーム">
                       <tbody>
                         <tr>
                           <th class="require">
@@ -64,9 +64,7 @@
                               name="your_birthday"
                               type="date"
                               class="form_control form_calendar"
-                              placeholder="2021/01/01"
                               required
-                              aria-required="true"
                               aria-describedby="your_birthday_remark"
                             />
                             <ul id="your_birthday_remark" class="form_remark">
@@ -86,6 +84,7 @@
                         id="form_submit"
                         class="btn_inner"
                         type="submit"
+                        aria-label="送信"
                         value="送信"
                       />
                     </div>
@@ -101,7 +100,11 @@
       <footer></footer>
     </div>
 
-    <script type="text/javascript" src="/jquery.common/js/jquery.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="/jquery.common/js/jquery.js"
+    ></script>
 
     <!--flatpicker ここから-->
     <link
@@ -110,26 +113,45 @@
       type="text/css"
       media="all"
     />
-    <script type="text/javascript" src="/flatpickr/dist/flatpickr.js"></script>
-    <script type="text/javascript" src="/flatpickr/dist/l10n/ja.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="/flatpickr/dist/flatpickr.js"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="/flatpickr/dist/l10n/ja.js"
+    ></script>
     <!--flatpicker ここまで-->
 
     <!-- jquery-validation Start -->
     <script
+      defer
       type="text/javascript"
       src="/jquery-validation/dist/jquery.validate.js"
     ></script>
     <script
+      defer
       type="text/javascript"
       src="/jquery-validation/dist/additional-methods.js"
     ></script>
     <script
+      defer
       type="text/javascript"
       src="/jquery-validation/dist/localization/messages_ja.js"
     ></script>
     <!-- jquery-validation End -->
 
-    <script type="text/javascript" src="../lib/common/js/scripts.js"></script>
-    <script type="text/javascript" src="../lib/pages/js/scripts.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../lib/common/js/scripts.js"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../lib/pages/js/scripts.js"
+    ></script>
   </body>
 </html>
