@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <link
       rel="stylesheet"
       href="/jquery.common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
     <link
       rel="stylesheet"
       href="../lib/common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
 
     <title>jQuery.form / Textarea</title>
   </head>
@@ -34,7 +34,7 @@
         </section>
       </header>
       <main>
-        <section class="page_layout layout1">
+        <div class="page_layout layout1">
           <div class="layout_inner">
             <div class="layout_container">
               <div class="layout_width">
@@ -48,34 +48,32 @@
                     method="get"
                   >
                     <!-- Form Table Start-->
-                    <table class="form_table" aria-label="お問い合わせフォーム">
-                      <tbody>
-                        <tr>
-                          <th class="require">
-                            <label for="your_message" class="form_table_label">
-                              テキストエリア
-                            </label>
-                          </th>
-                          <td>
-                            <textarea
-                              name="your_message"
-                              id="your_message"
-                              cols="40"
-                              rows="5"
-                              class="form_control"
-                              placeholder="お問い合わせ内容を入力"
-                              required
-                              aria-describedby="your_message_remark"
-                            ></textarea>
-                            <ul id="your_message_remark" class="form_remark">
-                              <li>
-                                入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="form_table">
+                      <div class="table_tr">
+                        <div class="table_th require">
+                          <label for="your_message" class="form_table_label">
+                            テキストエリア
+                          </label>
+                        </div>
+                        <div class="table_td">
+                          <textarea
+                            name="your_message"
+                            id="your_message"
+                            cols="40"
+                            rows="5"
+                            class="form_control"
+                            placeholder="お問い合わせ内容を入力"
+                            required
+                            aria-describedby="your_message_remark"
+                          ></textarea>
+                          <ul id="your_message_remark" class="form_remark">
+                            <li>
+                              入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Form Table End -->
 
                     <!-- Submit Button Start -->
@@ -86,7 +84,7 @@
                         type="submit"
                         aria-label="送信"
                         value="送信"
-                      />
+                     >
                     </div>
                     <!-- Submit Button End -->
                   </form>
@@ -95,44 +93,22 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <footer></footer>
     </div>
-
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery.common/js/jquery.js"
-    ></script>
+    <script defer src="/jquery.common/js/jquery.js"></script>
 
     <!-- jquery-validation Start -->
+    <script defer src="/jquery-validation/dist/jquery.validate.js"></script>
+    <script defer src="/jquery-validation/dist/additional-methods.js"></script>
     <script
       defer
-      type="text/javascript"
-      src="/jquery-validation/dist/jquery.validate.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/additional-methods.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
       src="/jquery-validation/dist/localization/messages_ja.js"
     ></script>
     <!-- jquery-validation End -->
 
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/common/js/scripts.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/pages/js/scripts.js"
-    ></script>
+    <script defer src="../lib/common/js/scripts.js"></script>
+    <script defer src="../lib/pages/js/scripts.js"></script>
   </body>
 </html>

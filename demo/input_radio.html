@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <link
       rel="stylesheet"
       href="/jquery.common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
     <link
       rel="stylesheet"
       href="../lib/common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
 
     <title>jQuery.form / Input - Radio</title>
   </head>
@@ -36,7 +36,7 @@
         </section>
       </header>
       <main>
-        <section class="page_layout layout1">
+        <div class="page_layout layout1">
           <div class="layout_inner">
             <div class="layout_container">
               <div class="layout_width">
@@ -50,15 +50,13 @@
                     method="get"
                   >
                     <!-- Form Table Start-->
-                    <table class="form_table" aria-label="お問い合わせフォーム">
-                      <tbody>
-                        <tr>
-                          <th class="require">
-                            <label class="form_table_label"
-                              >ラジオボタン<br class="pc" />(横並び)</label
-                            >
-                          </th>
-                          <td>
+                    <div class="form_table">
+                      <div class="table_tr">
+                        <fieldset class="table_fieldset">
+                          <legend class="table_th require">
+                            ラジオボタン<br class="pc">(横並び)
+                          </legend>
+                          <div class="table_td">
                             <ul
                               class="form_radio form_item_inline_block_pc form_item_inline_block_sp"
                             >
@@ -70,7 +68,7 @@
                                     value="プードル"
                                     checked
                                     aria-describedby="your_dog1_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >プードル</span
                                   ></label
                                 >
@@ -82,7 +80,7 @@
                                     name="your_dog1"
                                     value="チワワ"
                                     aria-describedby="your_dog1_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >チワワ</span
                                   ></label
                                 >
@@ -94,7 +92,7 @@
                                     name="your_dog1"
                                     value="ダルメシアン"
                                     aria-describedby="your_dog1_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >ダルメシアン</span
                                   ></label
                                 >
@@ -106,7 +104,7 @@
                                     name="your_dog1"
                                     value="パピヨン"
                                     aria-describedby="your_dog1_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >パピヨン</span
                                   ></label
                                 >
@@ -118,7 +116,7 @@
                                     name="your_dog1"
                                     value="ラブラドール"
                                     aria-describedby="your_dog1_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >ラブラドール</span
                                   ></label
                                 >
@@ -129,15 +127,15 @@
                                 入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
                               </li>
                             </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th class="require">
-                            <label class="form_table_label"
-                              >ラジオボタン<br class="pc" />(縦並び)</label
-                            >
-                          </th>
-                          <td>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div class="table_tr">
+                        <fieldset class="table_fieldset">
+                          <legend class="table_th require">
+                            ラジオボタン<br class="pc">(縦並び)
+                          </legend>
+                          <div class="table_td">
                             <ul
                               class="form_radio form_item_block_pc form_item_block_sp"
                             >
@@ -149,7 +147,7 @@
                                     value="プードル"
                                     checked
                                     aria-describedby="your_dog2_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >プードル</span
                                   ></label
                                 >
@@ -161,7 +159,7 @@
                                     name="your_dog2"
                                     value="チワワ"
                                     aria-describedby="your_dog2_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >チワワ</span
                                   ></label
                                 >
@@ -173,7 +171,7 @@
                                     name="your_dog2"
                                     value="ダルメシアン"
                                     aria-describedby="your_dog2_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >ダルメシアン</span
                                   ></label
                                 >
@@ -185,7 +183,7 @@
                                     name="your_dog2"
                                     value="パピヨン"
                                     aria-describedby="your_dog2_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >パピヨン</span
                                   ></label
                                 >
@@ -197,7 +195,7 @@
                                     name="your_dog2"
                                     value="ラブラドール"
                                     aria-describedby="your_dog2_remark"
-                                  /><span class="form_list_item_label"
+                                  ><span class="form_list_item_label"
                                     >ラブラドール</span
                                   ></label
                                 >
@@ -208,10 +206,10 @@
                                 入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
                               </li>
                             </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
                     <!-- Form Table End -->
 
                     <!-- Submit Button Start -->
@@ -222,7 +220,7 @@
                         type="submit"
                         aria-label="送信"
                         value="送信"
-                      />
+                      >
                     </div>
                     <!-- Submit Button End -->
                   </form>
@@ -231,44 +229,20 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <footer></footer>
-    </div>
 
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery.common/js/jquery.js"
-    ></script>
+    </div>
+    <script defer src="/jquery.common/js/jquery.js"></script>
 
     <!-- jquery-validation Start -->
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/jquery.validate.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/additional-methods.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/localization/messages_ja.js"
-    ></script>
+    <script defer src="/jquery-validation/dist/jquery.validate.js"></script>
+    <script defer src="/jquery-validation/dist/additional-methods.js"></script>
+    <script defer src="/jquery-validation/dist/localization/messages_ja.js"></script>
     <!-- jquery-validation End -->
 
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/common/js/scripts.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/pages/js/scripts.js"
-    ></script>
+    <script defer src="../lib/common/js/scripts.js"></script>
+    <script defer src="../lib/pages/js/scripts.js"></script>
   </body>
 </html>

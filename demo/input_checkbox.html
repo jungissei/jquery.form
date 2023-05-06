@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <link
       rel="stylesheet"
       href="/jquery.common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
     <link
       rel="stylesheet"
       href="../lib/common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
 
     <title>jQuery.form / Input - Checkbox</title>
   </head>
@@ -36,7 +36,7 @@
         </section>
       </header>
       <main>
-        <section class="page_layout layout1">
+        <div class="page_layout layout1">
           <div class="layout_inner">
             <div class="layout_container">
               <div class="layout_width">
@@ -50,15 +50,14 @@
                     method="get"
                   >
                     <!-- Form Table Start-->
-                    <table class="form_table" aria-label="お問い合わせフォーム">
-                      <tbody>
-                        <tr>
-                          <th class="require">
-                            <label class="form_table_label"
-                              >チェックボックス<br class="pc" />(横並び)</label
-                            >
-                          </th>
-                          <td>
+                    <div class="form_table">
+                      <!-- .table_tr ここから -->
+                      <div class="table_tr">
+                        <fieldset class="table_fieldset">
+                          <legend class="table_th require">
+                            チェックボックス<br class="pc">(横並び)
+                          </legend>
+                          <div class="table_td">
                             <ul
                               class="form_check form_item_inline_block_pc form_item_inline_block_sp"
                               data-valid-group="required_all"
@@ -72,7 +71,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat1_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >アメリカンカール</span
                                   >
@@ -87,7 +86,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat1_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >ペルシャ</span
                                   >
@@ -102,7 +101,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat1_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >マンチカン</span
                                   >
@@ -117,7 +116,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat1_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >ロシアンブルー</span
                                   >
@@ -129,7 +128,7 @@
                                     type="checkbox"
                                     name="your_cat1[]"
                                     value="ボンペイ"
-                                  />
+                                  >
                                   <span
                                     class="form_list_item_label"
                                     aria-describedby="your_cat1_remark"
@@ -143,15 +142,17 @@
                                 入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
                               </li>
                             </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th class="require">
-                            <label class="form_table_label"
-                              >チェックボックス<br class="pc" />(縦並び)</label
-                            >
-                          </th>
-                          <td>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <!-- .table_tr ここまで -->
+                      <!-- .table_tr ここから -->
+                      <div class="table_tr">
+                        <fieldset class="table_fieldset">
+                          <legend class="table_th require">
+                            チェックボックス<br class="pc">(縦並び)
+                          </legend>
+                          <div class="table_td">
                             <ul
                               class="form_check form_item_block_pc form_item_block_sp"
                               data-valid-group="required_all"
@@ -165,7 +166,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat2_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >アメリカンカール</span
                                   >
@@ -180,7 +181,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat2_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >ペルシャ</span
                                   >
@@ -195,7 +196,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat2_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >マンチカン</span
                                   >
@@ -210,7 +211,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat2_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >ロシアンブルー</span
                                   >
@@ -225,7 +226,7 @@
                                     required
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_cat2_remark"
-                                  />
+                                  >
                                   <span class="form_list_item_label"
                                     >ボンペイ</span
                                   >
@@ -237,10 +238,11 @@
                                 入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
                               </li>
                             </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <!-- .table_tr ここまで -->
+                    </div>
                     <!-- Form Table End -->
 
                     <!-- Submit Button Start -->
@@ -251,7 +253,7 @@
                         type="submit"
                         value="送信"
                         aria-label="送信"
-                      />
+                      >
                     </div>
                     <!-- Submit Button End -->
                   </form>
@@ -260,44 +262,22 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <footer></footer>
     </div>
-
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery.common/js/jquery.js"
-    ></script>
+    <script defer src="/jquery.common/js/jquery.js"></script>
 
     <!-- jquery-validation Start -->
+    <script defer src="/jquery-validation/dist/jquery.validate.js"></script>
+    <script defer src="/jquery-validation/dist/additional-methods.js"></script>
     <script
       defer
-      type="text/javascript"
-      src="/jquery-validation/dist/jquery.validate.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/additional-methods.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
       src="/jquery-validation/dist/localization/messages_ja.js"
     ></script>
     <!-- jquery-validation End -->
 
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/common/js/scripts.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/pages/js/scripts.js"
-    ></script>
+    <script defer src="../lib/common/js/scripts.js"></script>
+    <script defer src="../lib/pages/js/scripts.js"></script>
   </body>
 </html>

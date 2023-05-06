@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <link
       rel="stylesheet"
       href="/jquery.common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
     <link
       rel="stylesheet"
       href="../lib/common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
 
     <title>jQuery.form / Input - Date</title>
   </head>
@@ -36,7 +36,7 @@
         </section>
       </header>
       <main>
-        <section class="page_layout layout1">
+        <div class="page_layout layout1">
           <div class="layout_inner">
             <div class="layout_container">
               <div class="layout_width">
@@ -50,32 +50,48 @@
                     method="get"
                   >
                     <!-- Form Table Start-->
-                    <table class="form_table" aria-label="お問い合わせフォーム">
-                      <tbody>
-                        <tr>
-                          <th class="require">
-                            <label for="your_birthday" class="form_table_label">
-                              生年月日
-                            </label>
-                          </th>
-                          <td>
-                            <input
-                              id="your_birthday"
-                              name="your_birthday"
-                              type="date"
-                              class="form_control form_calendar"
-                              required
-                              aria-describedby="your_birthday_remark"
-                            />
-                            <ul id="your_birthday_remark" class="form_remark">
-                              <li>
-                                入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="form_table">
+                      <div class="table_tr">
+                        <div class="table_th require">
+                          <label for="your_birthday1" class="form_table_label">
+                            生年月日
+                          </label>
+                        </div>
+                        <div class="table_td">
+                          <input
+                            id="your_birthday1"
+                            name="your_birthday"
+                            type="date"
+                            class="form_control"
+                            required
+                            aria-describedby="your_birthday_remark1"
+                          >
+                          <ul id="your_birthday_remark1" class="form_remark">
+                            <li>ブラウザのカレンダーUI</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="table_tr">
+                        <div class="table_th require">
+                          <label for="your_birthday2" class="form_table_label">
+                            生年月日
+                          </label>
+                        </div>
+                        <div class="table_td">
+                          <input
+                            id="your_birthday2"
+                            name="your_birthday"
+                            type="date"
+                            class="form_control form_calendar"
+                            required
+                            aria-describedby="your_birthday_remark2"
+                          >
+                          <ul id="your_birthday_remark2" class="form_remark">
+                            <li>flatpickerのカレンダーUI</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Form Table End -->
 
                     <!-- Submit Button Start -->
@@ -86,7 +102,7 @@
                         type="submit"
                         aria-label="送信"
                         value="送信"
-                      />
+                      >
                     </div>
                     <!-- Submit Button End -->
                   </form>
@@ -95,16 +111,12 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <footer></footer>
-    </div>
 
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery.common/js/jquery.js"
-    ></script>
+    </div>
+    <script defer src="/jquery.common/js/jquery.js"></script>
 
     <!--flatpicker ここから-->
     <link
@@ -112,46 +124,18 @@
       href="/flatpickr/dist/flatpickr.css"
       type="text/css"
       media="all"
-    />
-    <script
-      defer
-      type="text/javascript"
-      src="/flatpickr/dist/flatpickr.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/flatpickr/dist/l10n/ja.js"
-    ></script>
+    >
+    <script defer src="/flatpickr/dist/flatpickr.js"></script>
+    <script defer src="/flatpickr/dist/l10n/ja.js"></script>
     <!--flatpicker ここまで-->
 
     <!-- jquery-validation Start -->
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/jquery.validate.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/additional-methods.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/localization/messages_ja.js"
-    ></script>
+    <script defer src="/jquery-validation/dist/jquery.validate.js"></script>
+    <script defer src="/jquery-validation/dist/additional-methods.js"></script>
+    <script defer src="/jquery-validation/dist/localization/messages_ja.js"></script>
     <!-- jquery-validation End -->
 
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/common/js/scripts.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/pages/js/scripts.js"
-    ></script>
+    <script defer src="../lib/common/js/scripts.js"></script>
+    <script defer src="../lib/pages/js/scripts.js"></script>
   </body>
 </html>

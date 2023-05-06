@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <link
       rel="stylesheet"
       href="/jquery.common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
     <link
       rel="stylesheet"
       href="../lib/common/css/style.css"
       type="text/css"
       media="all"
-    />
+    >
 
     <title>jQuery.form / Textarea</title>
   </head>
@@ -34,7 +34,7 @@
         </section>
       </header>
       <main>
-        <section class="page_layout layout1">
+        <div class="page_layout layout1">
           <div class="layout_inner">
             <div class="layout_container">
               <div class="layout_width">
@@ -48,61 +48,59 @@
                     method="get"
                   >
                     <!-- Form Table Start-->
-                    <table class="form_table" aria-label="お問い合わせフォーム">
-                      <tbody>
-                        <tr>
-                          <th>
-                            <label for="your_name" class="form_table_label">
-                              お名前
-                            </label>
-                          </th>
-                          <td>
-                            <input
-                              id="your_name"
-                              class="form_control"
-                              name="your_name"
-                              type="text"
-                              placeholder="田中 太郎"
-                              autocomplete="name"
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>
-                            <label for="your_email" class="form_table_label">
-                              メールアドレス
-                            </label>
-                          </th>
-                          <td>
-                            <input
-                              id="your_email"
-                              name="your_email"
-                              type="email"
-                              class="form_control"
-                              placeholder="taro@example.com"
-                              autocomplete="email"
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>
-                            <label for="your_message" class="form_table_label">
-                              テキストエリア
-                            </label>
-                          </th>
-                          <td>
-                            <textarea
-                              name="your_message"
-                              id="your_message"
-                              cols="40"
-                              rows="5"
-                              class="form_control"
-                              placeholder="お問い合わせ内容を入力"
-                            ></textarea>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="form_table">
+                      <div class="table_tr">
+                        <div class="table_th">
+                          <label for="your_name" class="form_table_label">
+                            お名前
+                          </label>
+                        </div>
+                        <div class="table_td">
+                          <input
+                            id="your_name"
+                            class="form_control"
+                            name="your_name"
+                            type="text"
+                            placeholder="田中 太郎"
+                            autocomplete="name"
+                          >
+                        </div>
+                      </div>
+                      <div class="table_tr">
+                        <div class="table_th">
+                          <label for="your_email" class="form_table_label">
+                            メールアドレス
+                          </label>
+                        </div>
+                        <div class="table_td">
+                          <input
+                            id="your_email"
+                            name="your_email"
+                            type="email"
+                            class="form_control"
+                            placeholder="taro@example.com"
+                            autocomplete="email"
+                          >
+                        </div>
+                      </div>
+                      <div class="table_tr">
+                        <div class="table_th">
+                          <label for="your_message" class="form_table_label">
+                            テキストエリア
+                          </label>
+                        </div>
+                        <div class="table_td">
+                          <textarea
+                            name="your_message"
+                            id="your_message"
+                            cols="40"
+                            rows="5"
+                            class="form_control"
+                            placeholder="お問い合わせ内容を入力"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Form Table End -->
 
                     <!-- Privacy Policy Start -->
@@ -114,8 +112,9 @@
                           </span>
                         </h2>
                       </div>
+
                       <div class="form_privacy_row2">
-                        <div class="privacy_txt">
+                        <div class="privacy_txt" data-simplebar  data-simplebar-auto-hide="false">
                           <p>
                             ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
                           </p>
@@ -130,13 +129,14 @@
                           </p>
                         </div>
                       </div>
+
                       <div class="form_privacy_row3">
                         <ul
                           class="privacy_check form_check form_item_block_pc form_item_block_sp"
                         >
                           <li>
                             <label>
-                              <input id="privacy_checkbox" type="checkbox" />
+                              <input id="privacy_checkbox" type="checkbox">
                               <span class="form_list_item_label"
                                 >プライバシーポリシーに同意する</span
                               >
@@ -156,53 +156,35 @@
                         aria-label="送信"
                         value="送信"
                         disabled="disabled"
-                      />
+                      >
                     </div>
                     <!-- Submit Button End -->
                   </form>
                 </div>
                 <!-- Form End -->
+
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <footer></footer>
-    </div>
 
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery.common/js/jquery.js"
-    ></script>
+    </div>
+    <script defer src="/jquery.common/js/jquery.js"></script>
 
     <!-- jquery-validation Start -->
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/jquery.validate.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/additional-methods.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/localization/messages_ja.js"
-    ></script>
+    <script defer src="/jquery-validation/dist/jquery.validate.js"></script>
+    <script defer src="/jquery-validation/dist/additional-methods.js"></script>
+    <script defer src="/jquery-validation/dist/localization/messages_ja.js"></script>
     <!-- jquery-validation End -->
 
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/common/js/scripts.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/pages/js/scripts.js"
-    ></script>
+    <!-- simplebar Start -->
+    <link rel="stylesheet" href="/simplebar/packages/simplebar/dist/simplebar.css" type="text/css" media="all">
+    <script defer src="/simplebar/packages/simplebar/dist/simplebar.js"></script>
+    <!-- simplebar End -->
+
+    <script defer src="../lib/common/js/scripts.js"></script>
+    <script defer src="../lib/pages/js/scripts.js"></script>
   </body>
 </html>

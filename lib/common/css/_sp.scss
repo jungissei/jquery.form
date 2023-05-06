@@ -5,7 +5,6 @@
 // 【Table Of Content】
 //
 // Variables
-//    Form tale
 //    Form item
 // Mixin
 //    Hyphen separated
@@ -13,7 +12,6 @@
 // Form styles
 //    Block form
 //    Form area
-//    Form table
 //    Form layout
 //        List Block
 //        List Inline block
@@ -42,13 +40,6 @@
 // ----------------------------------------------------------------------------
 // Variables
 // ----------------------------------------------------------------------------
-// --------------------------------------
-// Form tale
-// --------------------------------------
-$require_txt: "\5FC5\9808";
-$require_color: #fd9495;
-$optional_txt: "\4EFB\610F";
-$optional_color: #95cafd;
 
 // --------------------------------------
 // Form item
@@ -100,6 +91,7 @@ $border_color: #ced4da;
   appearance: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   width: 100%;
+  text-align: left;
 
   &::placeholder {
     color: $txt_placeholder_color;
@@ -109,6 +101,12 @@ $border_color: #ced4da;
     border: 1px solid $focus_color;
     box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
     outline: unset;
+  }
+
+  &[type="date"]::-webkit-date-and-time-value,
+  &[type="time"]::-webkit-date-and-time-value {
+      text-align: left;
+      height: 1rem;
   }
 }
 
@@ -138,49 +136,51 @@ $border_color: #ced4da;
       margin-right: auto;
       margin-left: auto;
 
-      tbody {
-        tr {
+      .table_tr {
+        display: block;
+
+        .table_fieldset{
+          display: contents;
+        }
+
+        .table_th,
+        .table_td {
           display: block;
+          font-weight: normal;
+          width: 100%;
+        }
 
-          th,
-          td {
-            display: block;
-            font-weight: normal;
-            width: 100%;
+        &:not(:last-child) {
+          .table_td {
+            padding-bottom: 45px;
+          }
+        }
+
+        .table_th {
+          position: relative;
+          padding: 0 0 10px 52px;
+
+          .form_label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            font-size: 13px;
+            padding: 2px 8px;
+            font-weight: 700;
           }
 
-          &:not(:last-child) {
-            td {
-              padding-bottom: 45px;
+          &:not(.require) {
+            .form_label{
+              color: #055160;
+              background-color: #cff4fc;
             }
           }
 
-          th {
-            position: relative;
-            padding: 0 0 10px 52px;
-
-            &::before {
-              position: absolute;
-              top: 0;
-              left: 0;
-              color: #fff;
-              font-size: 13px;
-              padding: 2px 8px;
-              font-weight: 700;
-            }
-
-            &:not(.require) {
-              &::before {
-                background-color: $optional_color;
-                content: $optional_txt;
-              }
-            }
-
-            &.require {
-              &::before {
-                background-color: $require_color;
-                content: $require_txt;
-              }
+          &.require {
+            .form_label{
+              background-color: #fbd0da;
+              color: #5f071c;
             }
           }
         }
@@ -402,7 +402,6 @@ $border_color: #ced4da;
             top: -100%;
             left: -100%;
             opacity: 0;
-            visibility: hidden;
 
             + .form_list_item_label {
               display: inline-block;
@@ -438,6 +437,16 @@ $border_color: #ced4da;
               }
             }
 
+            &:focus{
+              + .form_list_item_label {
+
+                &::before {
+                  border: 1px solid $focus_color;
+                  box-shadow: 0 0 0 3px rgba($focus_color, 0.5);
+                }
+              }
+            }
+
             &:checked {
               + .form_list_item_label {
                 &::after {
@@ -467,7 +476,6 @@ $border_color: #ced4da;
             top: -100%;
             left: -100%;
             opacity: 0;
-            visibility: hidden;
 
             + .form_list_item_label {
               display: inline-block;
@@ -501,6 +509,16 @@ $border_color: #ced4da;
               }
             }
 
+            &:focus{
+              + .form_list_item_label {
+
+                &::before {
+                  border: 1px solid $focus_color;
+                  box-shadow: 0 0 0 3px rgba($focus_color, 0.5);
+                }
+              }
+            }
+
             &:checked {
               + .form_list_item_label {
                 &::after {
@@ -515,48 +533,49 @@ $border_color: #ced4da;
 
     // Input File
     .form_file {
+      position: relative;
       font-size: 14px;
       padding-top: 5px;
 
-      .file_row{
-        &::after{
-          display: block;
-          content: "";
-          clear: both;
-        }
-      }
 
       input {
         position: absolute;
+        top: -200%;
+        left: -200%;
         outline: 0;
-        visibility: hidden;
         opacity: 0;
         width: 0;
         height: 0;
+
+        &:focus{
+          ~ .file_label{
+            .label_btn {
+              border: 1px solid $focus_color;
+              box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
+            }
+          }
+        }
       }
 
-      .form_file_label {
-        border: 1px solid $border_color;
-        padding: 8px;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        cursor: pointer;
-        float: left;
-        width: 116px;
-        text-align: center;
-      }
+      .file_label{
+        display: flex;
 
-      .form_file_name {
-        padding: 9px 8px 0;
-        line-height: 1.2;
-        cursor: pointer;
-        float: left;
-        width: calc(100% - 116px);
-      }
+        .label_btn{
+          border: 1px solid $border_color;
+          padding: 8px;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          cursor: pointer;
+          float: left;
+          width: 116px;
+          text-align: center;
+        }
 
-      &:hover {
-        .form_file_label {
-          border: 1px solid $focus_color;
-          box-shadow: 0 0 0 4px rgba($focus_color, 0.5);
+        .label_file_name{
+          padding: 9px 8px 0;
+          line-height: 1.2;
+          cursor: pointer;
+          float: left;
+          width: calc(100% - 116px);
         }
       }
     }
@@ -634,8 +653,9 @@ $border_color: #ced4da;
         }
 
         &:not(:disabled){
-          border: 1px solid $focus_color;
-          background-color: $focus_color;
+          color: #fff;
+          background-color: #0d6efd;
+          border: 1px solid  #0d6efd;
         }
 
       }
@@ -677,8 +697,7 @@ $border_color: #ced4da;
     }
 
     .privacy_txt{
-      height: 250px;
-      overflow-y: scroll;
+      height: 200px;
       border: #c0c0c0 1px solid;
       padding: 15px;
       box-shadow: inset -1px 2px 4px #dfdfdf;

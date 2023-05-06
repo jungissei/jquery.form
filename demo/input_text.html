@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <link
-      rel="stylesheet"
-      href="/jquery.common/css/style.css"
-      type="text/css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="../lib/common/css/style.css"
-      type="text/css"
-      media="all"
-    />
 
-    <title>jQuery.form / Input - Text</title>
-  </head>
-  <body>
-    <div id="wrapper">
-      <header>
-        <section id="template_ttl" class="page_layout layout1">
-          <div class="layout_inner">
-            <div class="layout_container">
-              <div class="layout_width">
-                <h1 id="form_title" class="ttl_page">
-                  jQuery.form / Input - Text
-                </h1>
-              </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/jquery.common/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../lib/common/css/style.css" type="text/css" media="all">
+
+  <title>jQuery.form / Input - Text</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <section id="template_ttl" class="page_layout layout1">
+        <div class="layout_inner">
+          <div class="layout_container">
+            <div class="layout_width">
+              <h1 id="form_title" class="ttl_page">
+                jQuery.form / Input - Text
+              </h1>
             </div>
           </div>
-        </section>
-      </header>
-      <main>
-        <section class="page_layout layout1">
-          <div class="layout_inner">
-            <div class="layout_container">
-              <div class="layout_width">
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="page_layout layout1">
+        <div class="layout_inner">
+          <div class="layout_container">
+            <div class="layout_width">
+
                 <!-- Form Start-->
                 <div class="block_form">
                   <form
@@ -49,43 +42,40 @@
                     action="#"
                     method="get"
                   >
+
                     <!-- Form Table Start-->
-                    <table class="form_table" aria-label="お問い合わせフォーム">
-                      <tbody>
-                        <tr>
-                          <th class="require">
-                            <label for="your_name" class="form_table_label">
-                              お名前
-                            </label>
-                          </th>
-                          <td>
-                            <input
-                              id="your_name"
-                              class="form_control"
-                              name="your_name"
-                              type="text"
-                              placeholder="田中 太郎"
-                              autocomplete="name"
-                              required
-                              aria-describedby="your_name_remark"
-                            />
-                            <ul id="your_name_remark" class="form_remark">
-                              <li>
-                                入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th class="require">
-                            <label
-                              for="your_family_name"
-                              class="form_table_label"
-                            >
-                              お名前(別々)
-                            </label>
-                          </th>
-                          <td>
+                    <div class="form_table">
+                      <!-- .table_tr ここから -->
+                      <div class="table_tr">
+                        <div class="table_th require">
+                          <label for="your_name" class="form_table_label">
+                            お名前
+                          </label>
+                        </div>
+                        <div class="table_td">
+                          <input
+                            id="your_name"
+                            class="form_control"
+                            name="your_name"
+                            type="text"
+                            placeholder="田中 太郎"
+                            autocomplete="name"
+                            required
+                            aria-describedby="your_name_remark"
+                          >
+                          <ul id="your_name_remark" class="form_remark">
+                            <li>入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- .table_tr ここまで -->
+                      <!-- .table_tr ここから -->
+                      <div class="table_tr">
+                        <fieldset class="table_fieldset">
+                          <legend class="table_th require">
+                            お名前(別々)
+                          </legend>
+                          <div class="table_td">
                             <div
                               class="form_name_group"
                               data-valid-group="required_all"
@@ -103,7 +93,7 @@
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_family_name_remark"
                                     aria-label="姓"
-                                  />
+                                  >
                                 </div>
                                 <div class="group_col">
                                   <input
@@ -117,14 +107,11 @@
                                     data-valid-group-item="required_all"
                                     aria-describedby="your_given_name_remark"
                                     aria-label="名"
-                                  />
+                                  >
                                 </div>
                               </div>
                             </div>
-                            <ul
-                              id="your_family_name_remark"
-                              class="form_remark"
-                            >
+                            <ul id="your_family_name_remark" class="form_remark">
                               <li>
                                 入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
                               </li>
@@ -134,12 +121,13 @@
                                 入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。入力欄の説明が入ります。
                               </li>
                             </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!-- Form Table End -->
+                          </div>
+                      </fieldset>
+                    </div>
+                      <!-- .table_tr ここまで -->
 
+                    </div>
+                    <!-- Form Table End -->
                     <!-- Submit Button Start -->
                     <div class="btn_submit">
                       <input
@@ -148,53 +136,30 @@
                         type="submit"
                         aria-label="送信"
                         value="送信"
-                      />
+                      >
                     </div>
                     <!-- Submit Button End -->
                   </form>
                 </div>
                 <!-- Form End -->
-              </div>
+
             </div>
           </div>
-        </section>
-      </main>
-      <footer></footer>
-    </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <script defer src="/jquery.common/js/jquery.js"></script>
 
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery.common/js/jquery.js"
-    ></script>
+  <!-- jquery-validation Start -->
+  <script defer src="/jquery-validation/dist/jquery.validate.js"></script>
+  <script defer src="/jquery-validation/dist/additional-methods.js"></script>
+  <script defer src="/jquery-validation/dist/localization/messages_ja.js"></script>
+  <!-- jquery-validation End -->
 
-    <!-- jquery-validation Start -->
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/jquery.validate.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/additional-methods.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="/jquery-validation/dist/localization/messages_ja.js"
-    ></script>
-    <!-- jquery-validation End -->
+  <script defer src="../lib/common/js/scripts.js"></script>
+  <script defer src="../lib/pages/js/scripts.js"></script>
+</body>
 
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/common/js/scripts.js"
-    ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="../lib/pages/js/scripts.js"
-    ></script>
-  </body>
 </html>
